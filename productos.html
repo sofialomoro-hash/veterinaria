@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dogo Veterinaria</title>
+</head>
+<body>
+    <header>
+        <h1>El Dogo Veterinaria</h1>
+    </header>
+    <nav class="menu">
+        <div class="contenedor"
+        <ul class="menu-flex">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./clientes.html">Clientes</a></li>
+            <li><a href="./mascotas.html">Mascotas</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+        </ul>
+    </div>
+    </nav>
+    <main class="contenedor sombra">
+        <div class="titulo-admin-flex">
+            <h2>Listado de Productos</h2>
+            <button id="btn-nuevo-producto" class="boton-admin">
+                Cargar nuevo producto
+            </button>
+        </div>
+
+
+        <section class="servicios" id="lista-productos">
+
+        </section>
+
+        <!-- Carrito de compras-->
+         <section class="carrito">
+            <h3>Carrito de compras</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-tabla">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>Total</td>
+                        <td>$ <span id="total"></span>.-</td>
+                    </tr>
+                </tfoot>
+            </table>
+         </section>
+
+
+    </main>
+
+    <!-- Diálogo modal para cargar / modificar productos-->
+     <dialog id="dialogo-producto">
+        <form id="form-producto" class="formulario-modal">
+            <h3 id="dialogo-titulo">Cargar Producto</h3>
+            <input type="hidden" id="modo-edicion" value="false">
+            <div class="campo-modal">
+                <label for="prod-codigo">Código:</label>
+                <input type="number" id="prod-codigo" min="1" required>
+            </div>
+            <div class="campo-modal">
+                <label for="prod-nombre">Nombre:</label>
+                <input type="text" id="prod-nombre" required>
+            </div>
+            <div class="campo-modal">
+                <label for="prod-categoria">Categoría:</label>
+                <input type="text" id="prod-categoria" required>
+            </div>
+            <div class="campo-modal">
+                <label for="prod-precio">Precio ($):</label>
+                <input type="number" id="prod-precio" min="0" required>
+            </div>
+            <div class="campo-modal">
+                <label for="prod-imagen">Imagen (ej. : default.jpg):</label>
+                <input type="text" id="prod-imagen" placeholder="default.jpg">
+            </div>
+            
+            <fieldset class="especificaciones-grupo">
+                <legend>Especificaciones</legend>
+
+                <div class="campo-modal">
+                    <label for="prod-marca">Marca:</label>
+                    <input type="text" id="prod-marca">
+                </div>
+                <div class="campo-modal">
+                    <label for="prod-material">Material:</label>
+                    <input type="text" id="prod-material">
+                </div>
+                <div class="campo-modal">
+                    <label for="prod-tamaño">Tamaño:</label>
+                    <input type="text" id="prod-tamaño">
+                </div>
+                <div class="campo-modal">
+                    <label for="prod-mascota">Mascota:</label>
+                    <input type="text" id="prod-mascota">
+                </div>
+                
+
+            </fieldset>
+
+            <div class="form-botones">
+                <button type="submit" class="boton-dialogo guardar">Guardar</button>
+                <button type="button" id="btn-cancelar" class="boton-dialogo cancelar">Cancelar</button>
+            </div>
+
+        </form>
+     </dialog>
+    <footer>
+        <p>Veterinaria El Dogo - Todos los derechos reservados - 2026</p>
+    </footer>
+</body>
+</html>

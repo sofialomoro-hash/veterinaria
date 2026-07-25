@@ -1,0 +1,560 @@
+/* =========================================
+   ESTILOS GENERALES (Reset y tipografía)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f8f5;
+    color: #333;
+    padding-bottom: 40px;
+}
+h1 {
+    color: #00695c;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    color: #00695c;
+    margin: 20px 0 15px 0;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+nav {
+    background-color: #00838f;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Le sacamos los puntitos a la lista del menú y la ponemos horizontal */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #26c6da;
+    color: #004d40;
+}
+
+/* =========================================
+   FORMULARIOS (Fieldset, inputs, etc)
+   ========================================= */
+fieldset {
+    background: white;
+    border: 2px solid #80deea;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+legend {
+    background-color: #00838f;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Estilizamos las cajas de texto y menús desplegables */
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #00838f;
+    background-color: #e0f7fa;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+button, input[type="submit"] {
+    background-color: #00838f;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #26c6da;
+    color: #004d40;
+}
+
+/* =========================================
+   TABLAS DE DATOS (Para los listados)
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Para que los bordes redondeados se vean */
+    margin-bottom: 20px;
+}
+
+th {
+    background-color: #b2ebf2;
+    color: #004d40;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Filas intercaladas para que se lea mejor */
+tr:nth-child(even) {
+    background-color: #f9fbf9;
+}
+
+tr:hover {
+    background-color: #e0f2f1; /* Resalta la fila al pasar el mouse */
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+}
+/* =========================================
+   BANNER VETERINARIO (Estética moderna)
+   ========================================= */
+.banner-vet {
+    /* Capa semi-transparente verde oscura y celeste sobre la foto */
+    background-image: linear-gradient(rgba(0, 77, 64, 0.75), rgba(0, 131, 143, 0.75)), url('../imagenes/eldogobanner.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 100px 20px;
+}
+
+.banner-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.banner-subtitulo {
+    color: #b2ebf2; /* Celeste muy clarito */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.banner-destacado {
+    color: #e8f5e9; /* Verde muy clarito */
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.banner-contenido p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #f0f8f5;
+}
+
+.btn-banner-vet {
+    display: inline-block;
+    background-color: #4caf50; /* Verde acento */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px; /* Botón bien redondeado y amigable */
+    margin-top: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-banner-vet:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px); /* Efecto de que el botón se levanta un poquito */
+}
+
+/* =========================================
+   SECCIÓN 3 PILARES (Tarjetas y círculos)
+   ========================================= */
+.contenedor-pilares {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: -60px auto 50px auto; /* Sube las tarjetas pisando el banner */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.tarjeta-pilar {
+    background-color: white;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    border-radius: 15px; /* Bordes más suaves que antes */
+    padding: 40px 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* Sombra elegante */
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-bottom: 5px solid #00838f; /* Línea de color en la base para darle un detalle */
+}
+
+.tarjeta-pilar:hover {
+    transform: translateY(-10px); /* Efecto flotante al pasar el mouse por la tarjeta */
+}
+
+/* Los nuevos círculos decorativos */
+.icono-circular {
+    width: 100px;
+    height: 100px;
+    /* Degradado de celeste a verde clarito de tu paleta */
+    background: linear-gradient(135deg, #e1f5fe, #e8f5e9);
+    border: 3px solid #b2ebf2;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Tamaño del emoji */
+    box-shadow: 0 4px 10px rgba(0,131,143,0.15);
+}
+
+.pilar-titulo {
+    color: #00695c;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tarjeta-pilar p, .lista-pilar {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.lista-pilar {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-pilar li {
+    margin-bottom: 12px;
+}
+
+.btn-pilar {
+    display: inline-block;
+    color: #00838f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: 2px solid #00838f;
+    border-radius: 25px; /* Botón hueco (ghost button) y redondeado */
+    transition: all 0.3s;
+}
+
+.btn-pilar:hover {
+    background-color: #00838f;
+    color: white;
+}
+/* =========================================
+   PÁGINA NOSOTROS
+   ========================================= */
+.contenedor-nosotros {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cabecera-nosotros {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cabecera-nosotros h1 {
+    font-size: 2.8rem;
+    color: #00695c;
+    margin-bottom: 10px;
+}
+
+.cabecera-nosotros h2 {
+    font-size: 1.3rem;
+    color: #00838f;
+    font-weight: normal;
+}
+
+.tarjeta-info {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    border-left: 6px solid #4caf50; /* Detalle verde en el borde izquierdo */
+}
+
+.texto-destacado {
+    font-size: 1.2rem;
+    color: #00695c;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.subtitulo-nosotros {
+    color: #00838f;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b2ebf2;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.grilla-vision-proposito {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-vp {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(135deg, #e0f2f1, #e8f5e9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.tarjeta-vp h3 {
+    color: #004d40;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.titulo-valores {
+    text-align: center;
+    font-size: 2rem;
+    color: #00695c;
+    margin-bottom: 30px;
+    padding-top: 20px; /* Espacio para que el ancla respire al saltar */
+}
+
+.grilla-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-valor {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border: 1px solid #e0e0e0;
+}
+
+.tarjeta-valor:hover {
+    transform: translateY(-5px);
+    border-color: #80deea;
+}
+
+.icono-valor {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-valor h4 {
+    color: #00838f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-valor p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/* =========================================
+   TARJETAS DE PRODUCTOS ALINEADAS Y PROLIJAS
+   ========================================= */
+.grilla-productos-vet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.tarjeta-producto {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border: 1px solid #e0f2f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente de forma perfecta */
+    text-align: center;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,131,143,0.15);
+}
+
+.producto-codigo {
+    color: #00838f;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Imagen más grande y redonda */
+.circulo-imagen {
+    width: 190px; 
+    height: 190px;
+    background: linear-gradient(135deg, #e1f5fe, #e8f5e9);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.circulo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Especificaciones alineadas y ordenadas */
+.producto-specs {
+    list-style: none;
+    text-align: left; /* Mantiene el texto prolijo a la izquierda */
+    margin: 0 auto 20px auto;
+    padding: 0;
+    color: #555;
+    font-size: 0.95rem;
+    width: 85%; /* Ocupa un ancho controlado para que coincida visualmente */
+}
+
+.producto-specs li {
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.precio-producto {
+    font-size: 1.6rem;
+    color: #00695c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #388e3c;
+}
+
+.botones-admin-prod {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-editar, .btn-eliminar {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-editar {
+    background-color: #ffca28;
+    color: #333;
+}
+
+.btn-eliminar {
+    background-color: #ef5350;
+    color: white;
+}

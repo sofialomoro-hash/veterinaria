@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dogo Veterinaria</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>El Dogo Veterinaria</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./clientes.html">Clientes</a></li>
+            <li><a href="./mascotas.html">Mascotas</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Gestión de mascotas🐾</h2>
+            <fieldset style="max-width: 600px;">
+        <legend>Por favor, complete los campos</legend>
+        <form id="formulario-mascota">
+            
+            <table cellpadding="5">
+                <tr>
+                    <td>* Nombre de la mascota:</td>
+                    <td><input type="text" id="nombre-mascota" placeholder="Nombre" required></td>
+                </tr>
+                <tr>
+                    <td>* Dueño (Cliente):</td>
+                    <td>
+                        <select id="dueno-mascota" required>
+                            <option value="">Seleccione un dueño...</option>
+                            <!-- JS llenará esto con los clientes del LocalStorage -->
+                            <option value="12345678">Juan Pérez (Ejemplo)</option> 
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Especie:</td>
+                    <td>
+                        <select id="especie">
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Ave">Ave</option>
+                            <option value="Exótico">Exótico</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Raza:</td>
+                    <td><input type="text" id="raza" placeholder="Ej: Caniche, Siamés"></td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td>
+                        <input type="radio" name="sexo" value="Macho" id="macho"> <label for="macho">Macho</label>
+                        <input type="radio" name="sexo" value="Hembra" id="hembra"> <label for="hembra">Hembra</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de nacimiento / Edad:</td>
+                    <td><input type="date" id="fecha-nacimiento"></td>
+                </tr>
+                <tr>
+                    <td valign="top">Problemas de salud:</td>
+                    <td>
+                        <textarea id="problemas-salud" rows="4" cols="30" placeholder="Indique alergias, vacunas faltantes, o afecciones previas..."></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="button">Cancelar</button>
+        </form>
+        <p><small>El * indica que el campo es obligatorio.</small></p>
+    </fieldset>
+
+    <hr style="margin: 30px 0;">
+
+    <!-- Tabla para el listado de Mascotas -->
+    <h3>Listado de Mascotas Registradas</h3>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; text-align: left; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Nombre</th>
+                <th>Especie / Raza</th>
+                <th>Dueño</th>
+                <th>Salud</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-mascotas">
+            <!-- Las filas se van a llenar solas con JavaScript más adelante -->
+            <tr>
+                <td colspan="5" style="text-align: center;">Aún no hay mascotas registradas.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+        </section>
+    </main>
+    <footer>
+        <p>Veterinaria El Dogo - Todos los derechos reservados - 2026</p>
+    </footer>
+</body>
+</html>

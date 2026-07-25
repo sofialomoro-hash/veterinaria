@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dogo Veterinaria</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>El Dogo Veterinaria</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./clientes.html">Clientes</a></li>
+            <li><a href="./mascotas.html">Mascotas</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Gestión de clientes🐾</h2>
+            <form action="mailto:info@eldogo.com" method="post">
+                <fieldset>
+                    <legend>Por favor, complete los campos</legend>
+                    <table>
+                        <tr>
+                            <td><label for="nombre">* Nombre:</label></td>
+                            <td>
+                                <input 
+                                type="text"
+                                placeholder="Nombre y apellido"
+                                name="nombre"
+                                id="nombre"
+                                required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dni">* DNI:</label></td>
+                            <td>
+                                <input 
+                                type="text"
+                                placeholder="Documento"
+                                name="dni"
+                                id="dni"
+                                required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="direccion">Dirección:</label></td>
+                            <td>
+                                <input 
+                                type="text"
+                                placeholder="Calle y número"
+                                name="direccion"
+                                id="direccion"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="telefono">Teléfono:</label></td>
+                            <td>
+                                <input 
+                                type="tel"
+                                placeholder="Sin 0 y sin 15"
+                                name="telefono"
+                                id="telefono"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail:</label></td>
+                            <td>
+                                <input 
+                                type="email"
+                                placeholder="usuario@servidor"
+                                name="email"
+                                id="email"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="localidad">Localidad: </label></td>
+                            <td>
+                                <input 
+                                type="text"
+                                placeholder="Ciudad o pueblo"
+                                name="localidad"
+                                id="localidad"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="provincia">Provincia: </label></td>
+                            <td>
+                                <input 
+                                type="text"
+                                placeholder="Provincia"
+                                name="provincia"
+                                id="provincia"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mensaje">Observaciones: </label></td>
+                            <td>
+                                <textarea 
+                                name="mensaje" 
+                                id="mensaje"
+                                placeholder="Escriba sus observaciones aquí"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input 
+                                type="submit"                                
+                                value="Enviar"
+                                />
+                            </td>
+                            <td>
+                                <input 
+                                type="reset"
+                                value="Cancelar"
+                                />
+                            </td>
+                        </tr>
+                    </table>
+                    <p>El * indica que el campo es obligatorio.</p>
+                </fieldset>
+
+             </form>
+
+             <hr style="margin: 30px 0;">
+<h3>Listado de Clientes Registrados</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="width: 100%; text-align: left;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th>DNI</th>
+            <th>Nombre y Apellido</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla-clientes">
+        <!-- Las filas se van a llenar solas con JavaScript más adelante -->
+        <tr>
+            <td colspan="5" style="text-align: center;">Aún no hay clientes registrados.</td>
+        </tr>
+    </tbody>
+</table>
+            
+        </section>
+    </main>
+    <footer>
+        <p>Veterinaria El Dogo - Todos los derechos reservados - 2026</p>
+    </footer>
+</body>
+</html>

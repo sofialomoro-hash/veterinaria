@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Dogo Veterinaria</title>
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
     <header>
@@ -18,54 +19,75 @@
             <li><a href="./nosotros.html">Nosotros</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Quiénes somos</h2>
-            <h3>Desde 1998,brindando la mejor atención y cuidado a tus mascotas. </h3>
-            <hr />
-            <p>
-                En la Veterinaria "El Dogo", nuestro equipo, liderado por Ricardo, 
-                comparte un amor innegable por los animales y años de experiencia clínica. 
-                Trabajamos día a día con un fuerte compromiso para garantizar el bienestar 
-                de tus compañeros de cuatro patas.
-            </p>
-            <h3>Sobre la Veterinaria</h3>
-            <p>
-                Somos una clínica veterinaria y Pet Shop ubicada en San Lorenzo, 
-                enfocada en ofecer servicio integral. Nos destacamos por mantener una 
-                organización impecable de la información de nuestras mascotas y clientes, 
-                garantizando una gestión eficiente y segura mediante la verificación de 
-                usuarios.
-            </p>
-            <h3>Visión y Propósito</h3>
-            <p>
-                <strong>Visión:</strong> Ser la clínica veterinaria de referencia en 
-                nuestra ciudad, destacándonos por la excelencia médica, el trato humano 
-                y la innovación en la gestión de nuestros pacientes.
-            </p>
-            <p>
-                <strong>Propósito:</strong> Garantizar la salud y felicidad de cada mascota a 
-                través de una atención profesional, ofreciendo también los mejores productos 
-                y accesorios, siempre bajo un sistema seguro que protege los datos de quienes 
-                nos eligen.
-            </p>
-            <h3>Nuestros valores</h3>
-            <dl>
-                <dt>Amor por los animales</dt>
-                   <dd>- Es el motor que impulsa cada decisión que tomamos al recibir a un paciente.</dd>
-                <dt>Seguridad y Organización</dt>
-                   <dd>- Mantenemos la información de altas, bajas y modificaciones rigurosamente protegida y controlada.</dd>
-                <dt>Atención personalizada</dt>
-                   <dd>- Entendemos que cada mascota es única, desde su edad hasta su historial de salud.</dd>
-                <dt>Experiencia profesional</dt>
-                   <dd>- Años de trayectoria en el rubro nos respaldan para cuidar a los que más querés.</dd>
-                <dt>Trato cercano con los dueños</dt>
-                   <dd>- Estamos para asesorar a cada persona que viene con su mascota, incluso en procesos de adopción</dd>
-                <dt>Compromiso genuino</dt>
-                   <dd>- Buscamos siempre nuevas formas de organizar la información para que la veterinaria funcione mucho mejor.</dd>
-            </dl>
-        </section>
-    </main>
+    <main class="contenedor-nosotros">
+    
+    <!-- Encabezado de la página -->
+    <div class="cabecera-nosotros">
+        <h1>Quiénes somos 🐾</h1>
+        <h2>Desde 1998, brindando la mejor atención y cuidado a tus mascotas.</h2>
+    </div>
+
+    <!-- Tarjeta Principal de Información -->
+    <div class="tarjeta-info">
+        <p class="texto-destacado">En la Veterinaria "El Dogo", nuestro equipo, liderado por Ricardo, comparte un amor innegable por los animales y años de experiencia clínica. Trabajamos día a día con un fuerte compromiso para garantizar el bienestar de tus compañeros de cuatro patas.</p>
+        
+        <h3 class="subtitulo-nosotros">Sobre la Veterinaria</h3>
+        <p>Somos una clínica veterinaria y Pet Shop ubicada en San Lorenzo, enfocada en ofrecer un servicio integral. Nos destacamos por mantener una organización impecable de la información de nuestras mascotas y clientes, garantizando una gestión eficiente y segura mediante la verificación de usuarios.</p>
+    </div>
+
+    <!-- Grilla de Visión y Propósito -->
+    <div class="grilla-vision-proposito">
+        <div class="tarjeta-vp">
+            <h3>👁️ Visión</h3>
+            <p>Ser la clínica veterinaria de referencia en nuestra ciudad, destacándonos por la excelencia médica, el trato humano y la innovación en la gestión de nuestros pacientes.</p>
+        </div>
+        <div class="tarjeta-vp">
+            <h3>🎯 Propósito</h3>
+            <p>Garantizar la salud y felicidad de cada mascota a través de una atención profesional, ofreciendo también los mejores productos y accesorios, siempre bajo un sistema seguro que protege los datos de quienes nos eligen.</p>
+        </div>
+    </div>
+
+    <!-- Sección de Valores (Acá apunta el ancla del botón) -->
+    <h3 id="valores" class="titulo-valores">Nuestros valores</h3>
+    
+    <div class="grilla-valores">
+        <div class="tarjeta-valor">
+            <div class="icono-valor">❤️</div>
+            <h4>Amor por los animales</h4>
+            <p>Es el motor que impulsa cada decisión que tomamos al recibir a un paciente.</p>
+        </div>
+        
+        <div class="tarjeta-valor">
+            <div class="icono-valor">🛡️</div>
+            <h4>Seguridad y Organización</h4>
+            <p>Mantenemos la información de altas, bajas y modificaciones rigurosamente protegida y controlada.</p>
+        </div>
+        
+        <div class="tarjeta-valor">
+            <div class="icono-valor">🤝</div>
+            <h4>Atención personalizada</h4>
+            <p>Entendemos que cada mascota es única, desde su edad hasta su historial de salud.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+            <div class="icono-valor">⭐</div>
+            <h4>Experiencia profesional</h4>
+            <p>Años de trayectoria en el rubro nos respaldan para cuidar a los que más querés.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+            <div class="icono-valor">🗣️</div>
+            <h4>Trato cercano</h4>
+            <p>Estamos para asesorar a cada persona, incluso en procesos de adopción.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+            <div class="icono-valor">📈</div>
+            <h4>Compromiso genuino</h4>
+            <p>Buscamos siempre nuevas formas de organizar la información para mejorar.</p>
+        </div>
+    </div>
+</main>
     <footer>
         <p>Veterinaria El Dogo - Todos los derechos reservados - 2026</p>
     </footer>

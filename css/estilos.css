@@ -344,7 +344,7 @@ footer {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     margin-bottom: 40px;
-    border-left: 6px solid #4caf50; /* Detalle verde en el borde izquierdo */
+    border-left: 6px solid #00695c; 
 }
 
 .texto-destacado {
@@ -557,4 +557,19 @@ footer {
 .btn-eliminar {
     background-color: #ef5350;
     color: white;
+}
+/* Forzar centrado absoluto del modal */
+dialog#dialogo-producto {
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px; /* O el ancho que prefieras */
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }

@@ -1,7 +1,7 @@
 export const productosIniciales = [
     {
         codigo: 101,
-        nombre: "Collar gatitos",
+        nombre: "Collar Gatitos",
         categoria: "Accesorios",
         precio: 8500,
         imagen: "collar.png", 

@@ -200,10 +200,10 @@ const abrirModalModificar = (codigo) => {
     document.getElementById("prod-categoria").value = producto.categoria;
     document.getElementById("prod-precio").value = producto.precio;
     document.getElementById("prod-imagen").value = producto.imagen;
-    document.getElementById("prod-procesador").value = producto.descripcion.marca;
-    document.getElementById("prod-almacenamiento").value = producto.descripcion.material;
-    document.getElementById("prod-camaras").value = producto.descripcion.tamaño;
-    document.getElementById("prod-pantalla").value = producto.descripcion.color;
+    document.getElementById("prod-marca").value = producto.descripcion.marca;
+    document.getElementById("prod-material").value = producto.descripcion.material;
+    document.getElementById("prod-tamaño").value = producto.descripcion.tamaño;
+    document.getElementById("prod-color").value = producto.descripcion.color;
 
     dialogo.showModal();
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Dogo Veterinaria</title>
     <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Librería SweetAlert2 para reemplazar el "localhost" -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -29,15 +31,13 @@
             <table cellpadding="5">
                 <tr>
                     <td>* Nombre de la mascota:</td>
-                    <td><input type="text" id="nombre-mascota" placeholder="Nombre" required></td>
+                    <td><input type="text" id="nombre" placeholder="Nombre" required></td>
                 </tr>
                 <tr>
                     <td>* Dueño (Cliente):</td>
                     <td>
-                        <select id="dueno-mascota" required>
+                        <select id="dueno" required>
                             <option value="">Seleccione un dueño...</option>
-                            <!-- JS llenará esto con los clientes del LocalStorage -->
-                            <option value="12345678">Juan Pérez (Ejemplo)</option> 
                         </select>
                     </td>
                 </tr>
@@ -65,19 +65,19 @@
                 </tr>
                 <tr>
                     <td>Fecha de nacimiento / Edad:</td>
-                    <td><input type="date" id="fecha-nacimiento"></td>
+                    <td><input type="date" id="edad"></td>
                 </tr>
                 <tr>
                     <td valign="top">Problemas de salud:</td>
                     <td>
-                        <textarea id="problemas-salud" rows="4" cols="30" placeholder="Indique alergias, vacunas faltantes, o afecciones previas..."></textarea>
+                        <textarea id="salud" rows="4" cols="30" placeholder="Indique alergias, vacunas faltantes, o afecciones previas..."></textarea>
                     </td>
                 </tr>
             </table>
 
             <br>
             <button type="submit">Enviar</button>
-            <button type="button">Cancelar</button>
+            <button type="reset">Cancelar</button>
         </form>
         <p><small>El * indica que el campo es obligatorio.</small></p>
     </fieldset>
@@ -90,16 +90,17 @@
         <thead>
             <tr style="background-color: #f2f2f2;">
                 <th>Nombre</th>
-                <th>Especie / Raza</th>
                 <th>Dueño</th>
-                <th>Salud</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Sexo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="tabla-mascotas">
             <!-- Las filas se van a llenar solas con JavaScript más adelante -->
             <tr>
-                <td colspan="5" style="text-align: center;">Aún no hay mascotas registradas.</td>
+                <td colspan="6" style="text-align: center;">Aún no hay mascotas registradas.</td>
             </tr>
         </tbody>
     </table>
@@ -110,5 +111,8 @@
     <footer>
         <p>Veterinaria El Dogo - Todos los derechos reservados - 2026</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="./controladores/lista-mascotas.js"></script>
 </body>
 </html>
